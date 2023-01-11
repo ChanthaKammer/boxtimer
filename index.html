@@ -8,32 +8,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <title>Timer</title>
 </head>
-<body>
+<body class="bg-info-subtle">
     <div class="timer">
         <h1 id="timer" class ="m-4 text-primary text-center">Timer</h1>
         <div class="container text-center">
-            <div class="btn-group m-3" role="group" aria-label="Basic example">
-                <button class="btn btn-danger">Start</button>
-                <button class="btn btn-danger" onclick="pauseTimer()">Pause</button>
+            <div class="btn-group m-3">
                 <!--<button class="btn btn-primary">Start</button>
                 <button class="btn btn-primary" onclick="pauseTimer()">Pause</button>-->
-                <button class="btn btn-primary" onclick="cancelTimer()">Cancel</button>
+                <button class="btn btn-lg btn-warning" onclick="cancelTimer()">Reset</button>
             </div>
-
-            <div class="btn-group m-3" role="group" aria-label="Basic example">
-                <button class = "btn btn-primary" onclick="createBox('parcel')">Parcel</button>
-                <button class = "btn btn-primary" onclick="createBox('small')">Small</button>
-                <button class = "btn btn-primary" onclick="createBox('rateA')">Rate A</button>
-                <button class = "btn btn-primary" onclick="createBox('medium')">Medium</button>
+            <div class="btn-group w-100 p-3">
+                <button class = "btn btn-primary btn-lg" onclick="createBox('parcel')">Parcel</button>
+                <button class = "btn btn-primary btn-lg" onclick="createBox('small')">Small</button>
             </div>
-
-            <div class="btn-group m-3" role="group" aria-label="Basic example">
-
-                <button class = "btn btn-primary" onclick="lightSpeed()">Lightspeed</button>
+            <div class="btn-group w-100 p-3">
+              <button class = "btn btn-primary btn-lg" onclick="createBox('rateA')">Rate A</button>
+              <button class = "btn btn-primary btn-lg" onclick="createBox('medium')">Medium</button>
+            </div>
+            <div class="btn-group m-3">
+                <button class = "btn btn-danger visually-hidden" onclick="lightSpeed()">Lightspeed</button>
             </div>
         </div>
     </div>
-    <table class="table table-success">
+    <table class="table table-light w-100">
         <thead>
           <tr>
             <th scope="col">Type</th>
